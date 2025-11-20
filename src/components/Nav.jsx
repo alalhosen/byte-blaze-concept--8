@@ -2,7 +2,7 @@ const Nav = () => {
   return (
     <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">ByteBlaze</a>
+        <a className="btn btn-ghost text-2xl gap-0 text-secondary normal-case">Byte<span className="text-primary">Blaze</span></a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
