@@ -6,13 +6,13 @@ const Nav = () => {
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li>
+          <li className="font-bold">
             <a>Home</a>
           </li>
-          <li>
+          <li className="font-bold text-primary">
             <a>Blogs</a>
-          </li>
-          <li>
+          </li> 
+          <li className="font-bold">
             <a>Bookmarks</a>
           </li>
         </ul>
