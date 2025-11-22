@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Nav = () => {
   const [theme, setTheme] = useState("light");
-  const handleToggle=(e)=>{
-    if(e.target.ckecked){
-        setTheme('synthwave')
-    }else{
-        setTheme('light')
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, []);
+
+  const handleToggle = (e) => {
+    if (e.target.ckecked) {
+      setTheme("synthwave");
+    } else {
+      setTheme("light");
     }
-  }
-  console.log(theme)
+  };
+  console.log(theme);
   return (
     <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
       <div className="flex-1">
@@ -32,7 +39,7 @@ const Nav = () => {
 
         <label className="toggle text-base-content">
           <input
-          onChange={handleToggle}
+            onChange={handleToggle}
             type="checkbox"
             // value="synthwave"
             className="theme-controller"
