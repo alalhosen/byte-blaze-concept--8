@@ -6,10 +6,10 @@ const Nav = () => {
     if(e.target.ckecked){
         setTheme('synthwave')
     }else{
-        setTheme{'light'}
+        setTheme('light')
     }
   }
-  console.log('theme')
+  console.log(theme)
   return (
     <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
       <div className="flex-1">
