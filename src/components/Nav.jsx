@@ -29,10 +29,10 @@ const Nav = () => {
           <Link to='/' className="font-bold">
             Home
           </Link>
-          <Link className="font-bold text-primary">
+          <Link to='/blogs' className="font-bold text-primary">
             Blogs
           </Link>
-          <Link className="font-bold">
+          <Link to='bookmarks' className="font-bold">
             Bookmarks
           </Link>
         </ul>
