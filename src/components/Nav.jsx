@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [theme, setTheme] = useState("light");
@@ -16,7 +17,6 @@ const Nav = () => {
       setTheme("light");
     }
   };
-  console.log(theme);
   return (
     <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
       <div className="flex-1">
@@ -26,15 +26,15 @@ const Nav = () => {
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li className="font-bold">
-            <a>Home</a>
-          </li>
-          <li className="font-bold text-primary">
-            <a>Blogs</a>
-          </li>
-          <li className="font-bold">
-            <a>Bookmarks</a>
-          </li>
+          <Link to='/' className="font-bold">
+            Home
+          </Link>
+          <Link className="font-bold text-primary">
+            Blogs
+          </Link>
+          <Link className="font-bold">
+            Bookmarks
+          </Link>
         </ul>
 
         <label className="toggle text-base-content">
