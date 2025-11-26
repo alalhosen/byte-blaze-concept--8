@@ -24,7 +24,7 @@ const Nav = () => {
           Byte<span className="text-primary">Blaze</span>
         </Link>
       </div>
-      <div className="flex">
+      <div className="flex gap-2">
         <ul className="menu menu-horizontal px-1 hidden sm:flex gap-5">
           <Link to='/' className="font-bold">
             Home
