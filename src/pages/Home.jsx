@@ -4,7 +4,7 @@ import Nav from "../components/Nav";
 const Home = () => {
   return (
     <div>
-  <Hero></Hero>
+      <Hero></Hero>
     </div>
   );
 };
