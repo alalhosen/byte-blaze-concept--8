@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 // import Blogs from "../pages/Blogs";
 // import Bookmarks from "../pages/Bookmarks";
 // import Home from "../pages/Home";
@@ -12,6 +13,8 @@ const MainLayout = () => {
       </div>
       {/* packet */}
       <Outlet></Outlet>
+      {/* footer */}
+      <Footer></Footer>
     </div>
   );
 };
