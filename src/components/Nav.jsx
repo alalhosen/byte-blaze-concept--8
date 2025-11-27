@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Nav = () => {
   const [theme, setTheme] = useState("light");
@@ -25,16 +25,17 @@ const Nav = () => {
         </Link>
       </div>
       <div className="flex gap-2">
-        <ul className="menu menu-horizontal px-1 hidden sm:flex gap-5">
-          <Link to='/' className="font-bold">
+        <ul className="menu menu-horizontal px-1 hidden sm:flex items-center gap-5">
+          <NavLink to='/' className={({isActive})=>isActive?'text-primary font-bold':'font-bold'}>
             Home
-          </Link>
-          <Link to='/blogs' className="font-bold text-primary">
+          </NavLink>
+          <NavLink to='/blogs' className={({isActive})=>isActive?'text-primary font-bold':'font-bold'}>
             Blogs
-          </Link>
-          <Link to='bookmarks' className="font-bold">
+          </NavLink>
+          <NavLink to='/bookmarks' className={({isActive})=>isActive?'text-primary font-bold':'font-bold'}>
             Bookmarks
-          </Link>
+          </NavLink>
+
         </ul>
 
         <label className="toggle text-base-content">
