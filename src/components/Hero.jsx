@@ -9,7 +9,7 @@ const Hero = () => {
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
-          <div className="flex">  
+          <div className="flex gap-8">  
             <button className="btn btn-primary">Read Blogs</button>
             <button className="btn btn-primary">Bookmarks</button>
           </div>
