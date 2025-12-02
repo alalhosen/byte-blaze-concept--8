@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="hero-content text-center">
         <div className="max-w-lg">
           <h1 className="text-5xl font-bold">
-            Welcome To <span className="bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient">ByteBlaze</span>
+            Welcome To <span className="bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient bg-300%">ByteBlaze</span>
           </h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
