@@ -1,8 +1,17 @@
+import { useEffect, useState } from "react";
 import Nav from "../components/Nav";
+import { data } from "react-router-dom";
 
 const Blogs = () => {
+const [blogs, setBlogs]=useState([])
+useEffect(()=>{
+  fetch('https://dev.to/api/articles?per_page=7&top=7')
+  .then(res=>res.json())
+  .then(data=>setBlogs(data))
+},[])
+
   return (
-    <section className="dark:bg-gray-100 dark:text-gray-800">
+    <section className="">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
         <a
           rel="noopener noreferrer"
