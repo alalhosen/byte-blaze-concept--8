@@ -1,7 +1,7 @@
 const Content = () => {
   return (
     <div>
-      <h1>Ami content </h1>
+      <h1>Ami ekjon content </h1>
     </div>
   );
 };
