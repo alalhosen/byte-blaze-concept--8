@@ -5,7 +5,7 @@ import rehypeRaw from "rehype-raw";
 
 const Content = () => {
   const blog = useLoaderData();
-  const { cover_image, title, description, published_at, tags, body_html } =
+  const { cover_image, title, tags, body_html } =
     blog;
   return (
     <div className="mx-auto group  border-2 p-2  border-opacity-30 hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block">
