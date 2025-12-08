@@ -4,17 +4,18 @@ import { Link, Outlet, useLoaderData } from "react-router-dom";
 
 const Blog = () => {
   const [tabIndex, setTabIndex] = useState(0);
-  
+
   const blog = useLoaderData();
   const {
     comments_count,
     title,
     reading_time_minutes,
     public_reactions_count,
-    published_at
+    published_at,
   } = blog;
-
-  
+  const handleBookmark=blog=>{
+    console.log(blog)
+  }
 
   return (
     <div className="max-w-3xl px-6 py-16 mx-auto space-y-12">
@@ -79,9 +80,12 @@ const Blog = () => {
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
               </svg>
               <span>Author</span>
-            </Link><MdBookmarkAdd />
-            <div>
-
+            </Link>
+            <div
+              onClick={() => handleBookmark(blog)}
+              className="bg-purple-400 p-3 ml-5 rounded-full hover:bg-opacity-30 bg-opacity-20 cursor-pointer hover:scale-105 overflow-hidden"
+            >
+              <MdBookmarkAdd size={20} className="text-secondary" />
             </div>
           </div>
         </div>
