@@ -2,16 +2,18 @@ import { useState } from "react";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
 
 const Blog = () => {
+  const [tabIndex, setTabIndex] = useState(0);
+  
   const blog = useLoaderData();
   const {
     comments_count,
     title,
     reading_time_minutes,
     public_reactions_count,
-    published_at,
-    tags,
+    published_at
   } = blog;
-  const [tabIndex, setTabIndex] = useState(0);
+
+  
 
   return (
     <div className="max-w-3xl px-6 py-16 mx-auto space-y-12">
@@ -81,7 +83,6 @@ const Blog = () => {
         </div>
         <Outlet />
       </article>
-    
     </div>
   );
 };

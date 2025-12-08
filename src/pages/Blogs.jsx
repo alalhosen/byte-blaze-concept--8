@@ -1,6 +1,8 @@
 import BlogCard from "../components/BlogCard";
+import Loader from "../components/Loader";
 import Nav from "../components/Nav";
-import { data, useLoaderData } from "react-router-dom";
+import { data, useLoaderData, useNavigation } from "react-router-dom";
+
 
 const Blogs = () => {
   // const [blogs, setBlogs]=useState([])
@@ -10,10 +12,11 @@ const Blogs = () => {
   //   .then(data=>setBlogs(data))
   // },[])
   // console.log(data)
-
   const blogs = useLoaderData();
-  console.log(blogs);
+const navigation = useNavigation();
 
+if (navigation.state === "loading") return <Loader></Loader>;
+  
   return (
     <section className="">
       <div className="container max-w-6xl p-6 py-6 mx-auto space-y-6 sm:space-y-12">
