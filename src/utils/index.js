@@ -16,3 +16,11 @@ export const saveBlog = blog => {
         return toast.error('Already Bookmarked!')
     }
 }
+
+// delete
+export const deleteBlog = id => {
+    let blogs = getBlogs()
+    const remaining = blogs.filter(blog => blog.id !== id)
+    localStorage.setItem('blogs', JSON.stringify(remaining))
+    toast.success('Blog Removed from Bookmark')
+}
