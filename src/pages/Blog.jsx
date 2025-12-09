@@ -13,9 +13,9 @@ const Blog = () => {
     public_reactions_count,
     published_at,
   } = blog;
-  const handleBookmark=blog=>{
-    console.log(blog)
-  }
+  const handleBookmark = (blog) => {
+    console.log(blog);
+  };
 
   return (
     <div className="max-w-3xl px-6 py-16 mx-auto space-y-12">
