@@ -3,6 +3,7 @@ import placeholderImage from '../assets/404.jpg'
 
 const BlogCard = ({ blog }) => {
   const { cover_image, title, description, published_at, id } = blog;
+  
   return (
     <Link
       to={`/blog/${id}`}
