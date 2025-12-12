@@ -13,6 +13,7 @@ const Bookmarks = () => {
     setBlogs(storedBlogs);
 
   };
+  if(blogs.length<1)return <h1>kichu nai vai</h1>
   return (
     <div className="grid px-4 sm:px-8 lg:px12 py-8 justify-center grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {blogs.map((blog) => (
