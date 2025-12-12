@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 import placeholderImage from "../assets/404.jpg";
 import { MdDeleteForever } from "react-icons/md";
-import { deleteBlog } from "../utils";
+// import { deleteBlog } from "../utils";
 
-const BlogCard = ({ blog, deletable }) => {
+const BlogCard = ({ blog, deletable,handleDelete }) => {
   const { cover_image, title, description, published_at, id } = blog;
-  const handleDelete = (id) => {
-    deleteBlog(id);
-  };
+  
   return (
     <div className="flex relative">
       <Link
