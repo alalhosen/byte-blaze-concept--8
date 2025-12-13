@@ -3,9 +3,9 @@ import placeholderImage from "../assets/404.jpg";
 import { MdDeleteForever } from "react-icons/md";
 // import { deleteBlog } from "../utils";
 
-const BlogCard = ({ blog, deletable,handleDelete }) => {
+const BlogCard = ({ blog, deletable, handleDelete }) => {
   const { cover_image, title, description, published_at, id } = blog;
-  
+
   return (
     <div className="flex relative">
       <Link
