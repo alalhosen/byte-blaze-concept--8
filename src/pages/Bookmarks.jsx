@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { deleteBlog, getBlogs } from "../utils";
 import BlogCard from "../components/BlogCard";
+import EmptyState from "../components/EmptyState";
 
 const Bookmarks = () => {
   const [blogs, setBlogs] = useState([]);
@@ -13,7 +14,8 @@ const Bookmarks = () => {
     setBlogs(storedBlogs);
 
   };
-  if(blogs.length<1)return <h1>kichu nai vai</h1>
+  if(blogs.length<1) return <EmptyState message='No Bookmarks Available!' address={'/blogs'} label={'Go To Blogs'}/>
+
   return (
     <div className="grid px-4 sm:px-8 lg:px12 py-8 justify-center grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {blogs.map((blog) => (

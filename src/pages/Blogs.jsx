@@ -1,7 +1,7 @@
 import BlogCard from "../components/BlogCard";
 import Loader from "../components/Loader";
 import Nav from "../components/Nav";
-import { data, useLoaderData, useNavigation } from "react-router-dom";
+import { data, Link, useLoaderData, useNavigation } from "react-router-dom";
 
 const Blogs = () => {
   // const [blogs, setBlogs]=useState([])
@@ -19,9 +19,8 @@ const Blogs = () => {
   return (
     <section className="">
       <div className="container max-w-6xl p-6 py-6 mx-auto space-y-6 sm:space-y-12">
-        <a
-          rel="noopener noreferrer"
-          href="#"
+        <Link
+        to={`/blog/${blogs[0].id}`}
           className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50"
         >
           <img
@@ -38,7 +37,7 @@ const Blogs = () => {
             </span>
             <p>{blogs[0].description}</p>
           </div>
-        </a>
+        </Link>
         <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {blogs.slice(1, 14).map((blog) => (
             <BlogCard blog={blog} key={blog.id} />
