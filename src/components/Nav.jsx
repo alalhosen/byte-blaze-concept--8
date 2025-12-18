@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaRibbon } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 
 const Nav = () => {
@@ -19,7 +20,8 @@ const Nav = () => {
   };
   return (
     <div className="navbar bg-base-100 shadow-lg px-4 sm:px-8 fixed z-10">
-      <div className="flex-1">
+      <div className="flex-1 flex">
+        <FaRibbon className="mt-2 text-3xl"></FaRibbon>
         <Link to='/' className="btn btn-ghost text-2xl gap-0 text-secondary normal-case">
           Byte<span className="text-primary">Blaze</span>
         </Link>
