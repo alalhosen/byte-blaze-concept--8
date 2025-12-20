@@ -9,8 +9,7 @@ const Hero = () => {
             Welcome To <span className="bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient bg-300%">ByteBlaze</span>
           </h1>
           <p className="py-6">
-           Bytebalze is best site. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+           Bytebalze is best site. I want to made a beautiful website.So, I am creating nice website. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
           <div className="flex gap-2 justify-center">
