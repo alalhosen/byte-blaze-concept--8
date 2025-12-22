@@ -41,6 +41,7 @@ const Nav = () => {
           </NavLink>
 
         </ul>
+        <button className="ml-12 font-bold text-lime-500 hover:scale-110 hover:text-green-500">Login</button>
 
         <label className="toggle text-base-content">
           <input
