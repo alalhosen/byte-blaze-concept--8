@@ -6,6 +6,7 @@ import Blog from "../pages/Blog";
 import Bookmarks from "../pages/Bookmarks";
 import Content from "../components/Content";
 import Author from "../components/Author";
+import Login from "../components/Login";
 
 export const router = createBrowserRouter([
   {
@@ -31,13 +32,13 @@ export const router = createBrowserRouter([
             index: true,
             element: <Content />,
             loader: ({ params }) =>
-          fetch(`https://dev.to/api/articles/${params.id}`),
+              fetch(`https://dev.to/api/articles/${params.id}`),
           },
           {
             path: "author",
             element: <Author />,
             loader: ({ params }) =>
-          fetch(`https://dev.to/api/articles/${params.id}`),
+              fetch(`https://dev.to/api/articles/${params.id}`),
           },
         ],
       },
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
         path: "/bookmarks",
         element: <Bookmarks></Bookmarks>,
       },
+      {
+        path:"/login",
+        element:<Login></Login>
+      }
     ],
   },
   // {
